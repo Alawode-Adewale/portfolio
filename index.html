@@ -1,95 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alawode Adewale Afeez - Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        header {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-        header p {
-            margin: 0.5rem 0 0;
-            font-size: 1.1rem;
-        }
-        main {
-            max-width: 900px;
-            margin: auto;
-            padding: 2rem;
-        }
-        .project {
-            background-color: white;
-            border-radius: 8px;
-            padding: 1rem 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .project h2 {
-            margin-top: 0;
-        }
-        .project a {
-            display: inline-block;
-            margin-top: 0.5rem;
-            color: #007BFF;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .project a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            font-size: 0.9rem;
-            color: #666;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="title">Personal Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+    nav {
+      background: #222;
+      padding: 10px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .lang-switcher {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .project-tile {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .project-tile h3 {
+      margin: 15px 0 10px;
+    }
+    .project-tile a {
+      display: inline-block;
+      padding: 8px 15px;
+      background: #007bff;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 5px;
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Alawode Adewale Afeez</h1>
-        <p>Full Stack Developer & Designer | GitHub: <a href="https://github.com/Alawode-Adewale" style="color: #4DA8DA;">@Alawode-Adewale</a></p>
-    </header>
 
-    <main>
-        <section class="project">
-            <h2>Tribune App</h2>
-            <p>A web application showcasing dynamic content presentation with clean UI and optimized performance.</p>
-            <a href="https://alawode-adewale.github.io/tribune/" target="_blank">Live Demo</a> |
-            <a href="https://github.com/Alawode-Adewale/tribune" target="_blank">Source Code</a>
-        </section>
+  <!-- Language Switcher -->
+  <div class="lang-switcher">
+    <label for="language">Language:</label>
+    <select id="language">
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+      <option value="ar">العربية</option>
+    </select>
+  </div>
 
-        <section class="project">
-            <h2>Landing Page</h2>
-            <p>A modern, responsive landing page built to highlight a brand's services and attract user engagement.</p>
-            <a href="https://alawode-adewale.github.io/landing-page/" target="_blank">Live Demo</a> |
-            <a href="https://github.com/Alawode-Adewale/landing-page" target="_blank">Source Code</a>
-        </section>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#welcome-section" data-i18n="welcome">Welcome</a></li>
+      <li><a href="#projects" data-i18n="projects">Projects</a></li>
+      <li><a href="#contact" data-i18n="contact">Contact</a></li>
+    </ul>
+  </nav>
 
-        <section class="project">
-            <h2>EyesightWork</h2>
-            <p>An innovative web platform focusing on visual solutions with smooth navigation and strong branding.</p>
-            <a href="https://alawode-adewale.github.io/eyesightwork/" target="_blank">Live Demo</a> |
-            <a href="https://github.com/Alawode-Adewale/eyesightwork" target="_blank">Source Code</a>
-        </section>
-    </main>
+  <!-- Welcome Section -->
+  <section id="welcome-section">
+    <h1 data-i18n="welcomeHeading">Hello, I'm Alawode Adewale Afeez</h1>
+    <p data-i18n="welcomeText">I build accessible, responsive, and multilingual websites with strong design and branding skills.</p>
+  </section>
 
-    <footer>
-        &copy; 2025 Alawode Adewale Afeez. All rights reserved.
-    </footer>
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2 data-i18n="projects">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-tile">
+        <h3>Tribune</h3>
+        <a href="https://alawode-adewale.github.io/tribune/" target="_blank">Live Demo</a>
+        <a href="https://github.com/Alawode-Adewale/tribune" target="_blank">Source Code</a>
+      </div>
+      <div class="project-tile">
+        <h3>Landing Page</h3>
+        <a href="https://alawode-adewale.github.io/landing-page/" target="_blank">Live Demo</a>
+        <a href="https://github.com/Alawode-Adewale/landing-page" target="_blank">Source Code</a>
+      </div>
+      <div class="project-tile">
+        <h3>EyesightWork</h3>
+        <a href="https://alawode-adewale.github.io/eyesightwork/" target="_blank">Live Demo</a>
+        <a href="https://github.com/Alawode-Adewale/eyesightwork" target="_blank">Source Code</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 data-i18n="contact">Contact</h2>
+    <p data-i18n="contactText">You can reach me through the following:</p>
+    <p>Email: <a href="mailto:eyesightconcept@gmail.com">eyesightconcept@gmail.com</a></p>
+    <p><a id="profile-link" href="https://github.com/alawode-adewale" target="_blank">GitHub Profile</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Alawode Adewale Afeez. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
